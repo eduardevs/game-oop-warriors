@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,15 +10,17 @@
     
 </head>
 <body>
-        
-        <?php include('./inc/header.php') ?>
-        <div class="container mt-5">
-            <div class="row">
-            
-            <a href="?todo=add">Create user</a>
-            <a href="./players.php">See all players</a>
-        </div>
-        </div>
-      
+
+
+
+    <form method="post" action="./dispatcher.php">
+        <label>username</label>
+        <input></input>
+        <label>password</label>
+        <input></input>
+        <!-- <label>role</label>
+        <input></input> -->
+    </form>
+    
 </body>
 </html>

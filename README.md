@@ -1,10 +1,14 @@
-# Une Stack Docker
+# Game OOP Warriors
+### TODO : 
+- Hydratation de la database de l'entité.
+- Database management with PDO.
+- Poo.
+- Docker
+    Avec :
 
-Avec :
-
--   php:7.4-apache
--   MariaDB
--   PhpMyAdmin
+    -   php:7.4-apache
+    -   MariaDB
+    -   PhpMyAdmin
 
 ## Le lancement
 
@@ -17,3 +21,4 @@ docker-compose up
 Et rendez vous sur **localhost:5555**
 
 Pour éditer: **./src**
+

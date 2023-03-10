@@ -11,15 +11,15 @@ class Connexion
     public function __construct()
     {
         try {
-            $this->$connexion = new PDO('mysql:host='.$host.';dbname='.$db, $user, $password);
-            // $this->setConnexion($PDO);
+            $this->connexion = new PDO('mysql:host='.$this->host.';dbname='.$this->db, $this->user, $this->password);
+
         } catch(Exception $e) {
             die('Erreur : '.$e->getMessage());
         };
     }
 
-    public function setConnexion($connexion)
+    public function getConnexion() 
     {
-        $this->connexion = $connexion;
+        return $this->connexion;
     }
 }
