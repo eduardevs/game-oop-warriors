@@ -21,4 +21,4 @@ docker-compose up
 Et rendez vous sur **localhost:5555**
 
 Pour éditer: **./src**
-
+todo a faire lhydratation, interaction des objets et ux (messages de sessions)

@@ -22,30 +22,28 @@
         </theader>
 
 <tbody>
-    <?php 
+    <?php
 
             $sql = 'SELECT * FROM warrior';
-            // Instance Pdo connexion
-            $db = new Connexion();
-            $connexion = $db->getConnexion();
-            // make normal query
-            $req = $connexion->query($sql);
-            
-            // $data =$req->fetch();
-            
-            // foreach ($data as $req->fetch()) {
-                // }
-                while($data = $req->fetch()) {
-                    echo('<tr><td>'.$data['id'].'</td><td>'.$data['name'].'</td></h2>');
-                    
-                }
-                $req->closeCursor();
-?>
+    // Instance Pdo connexion
+    $db = new Connexion();
+    $connexion = $db->getConnexion();
+    // make normal query
+    $req = $connexion->query($sql);
+
+    // $data =$req->fetch();
+
+    // foreach ($data as $req->fetch()) {
+    // }
+    while ($data = $req->fetch()) {
+        echo('<tr><td>'.$data['id'].'</td><td>'.$data['name'].'</td></h2>');
+    }
+    $req->closeCursor();
+    ?>
     
     </tbody>
     </table>
     <a class="btn btn-dark" href="./index.php">Return</a>
-    <br/>
    
 </body>
 </html>

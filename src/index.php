@@ -14,7 +14,7 @@
         <div class="container mt-5">
             <div class="row">
             
-            <a href="?todo=add">Create user</a>
+            <a href="./createplayer.php">Create user</a>
             <a href="./players.php">See all players</a>
         </div>
         </div>

@@ -11,13 +11,18 @@
 </head>
 <body>
 
-
+<?php include('./inc/header.php'); ?>
 
     <form method="post" action="./dispatcher.php">
-        <label>username</label>
-        <input></input>
-        <label>password</label>
-        <input></input>
+        <input type="hidden" name="todo" value="add"/>
+        <label for="username">username</label>
+        <input type="text" id="username" name="username" placeholder="jacksparrow"/>
+        <label for="password">password</label>
+        <input type="password" id="password" name="password" placeholder="your password"/>
+
+        <input type="submit" value="Créer character" />
+        <a class="btn btn-dark" href="./index.php">Return</a>
+
         <!-- <label>role</label>
         <input></input> -->
     </form>
