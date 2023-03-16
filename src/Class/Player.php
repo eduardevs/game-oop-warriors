@@ -5,28 +5,24 @@ class Player
     private int $life;
     private int $strength;
     private int $defense;
-    // private $energy;
+    private string $password;
     private string $name;
 
-    public const LIFE = 100;
-    public const ENERGY = 100;
-
-
-
-    public function __construct(int $life, int $strength, int $defense, string $name)
+    public function __construct(array $data)
     {
-        $this->life = $life;
-        $this->strength = $strength;
-
-        $this->defense = $defense;
-
-        $this->name = $name;
-
-        // $this->setLife($life);
-        // $this->setAttack($attack);
-        // $this->setdefense($defense);
-        // $this->setName($name);
+        $this->hydrate($data);
     }
+
+    public function hydrate(array $data)
+    {
+        foreach ($data as $key => $value) {
+            $method = 'set'.ucfirst($key);
+            if (is_callable([$this, $method])) {
+                $this->$method($value);
+            }
+        }
+    }
+
 
     // getter accessor
     public function getLife(): int
@@ -49,16 +45,12 @@ class Player
     {
         return $this->name;
     }
+    public function getId(): int
+    {
+        return $this->int;
+    }
 
-
-    // public function getEnergy()
-    // {
-    //     return $this->energy;
-    // }
-
-
-    // setter mutator
-
+    // setter mutators
     public function setStrength($strength): void
     {
         $this->strength = $strength;
@@ -78,13 +70,14 @@ class Player
     {
         $this->name = $name;
     }
+    public function setId($id): void
+    {
+        $this->id = $id;
+    }
 
 
-    // public function setEnergy($energy)
-    // {
-    //     $this->energy = $energy;
-    // }
-    // features
+
+
     public function attack($enemy)
     {
         if ($enemy->defense > 5 && $this->strength > 15) {

@@ -1,4 +1,4 @@
-<header class="row bg-primary text-white">
+<header class="row bg-dark text-white">
             <!-- TODO <nav></nav> -->
             <div class="d-flex justify-content-around w-100 mt-3">
                 <h1>Welcome to warriors game !</h1> 

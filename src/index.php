@@ -8,14 +8,15 @@
     <?php include('./inc/include_style.php'); ?>
     
 </head>
-<body>
-        
+<body>        
         <?php include('./inc/header.php') ?>
         <div class="container mt-5">
             <div class="row">
-            
-            <a href="./createplayer.php">Create user</a>
-            <a href="./players.php">See all players</a>
+            <div>
+                <a href="./createplayer.php" class="btn btn-primary">Create user</a>
+                <!-- this link fetch data from manager using fetch mode -->
+                <a href="dispatcher.php?todo=all" class="btn btn-info ml-2">See all players</a>
+            </div>
         </div>
         </div>
       

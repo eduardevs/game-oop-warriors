@@ -1,6 +1,3 @@
-<?php
-    session_start();
-    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,21 +20,9 @@
 <tbody>
     <?php
 
-            $sql = 'SELECT * FROM warrior';
-    // Instance Pdo connexion
-    $db = new Connexion();
-    $connexion = $db->getConnexion();
-    // make normal query
-    $req = $connexion->query($sql);
-    // var_dump($req);
-    // $data =$req->fetch();
-
-    // foreach ($data as $req->fetch()) {
-    // }
-    while ($data = $req->fetch()) {
-        echo('<tr><td>'.$data['id'].'</td><td>'.$data['name'].'</td></h2>');
-    }
-    $req->closeCursor();
+   foreach ($players as $player) {
+       echo('<tr><td>'.$player['id'].'</td><td>'.$player['name'].'</td></h2>');
+   }
     ?>
     
     </tbody>

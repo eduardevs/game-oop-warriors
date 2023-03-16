@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,20 +15,27 @@
 <body>
 
 <?php include('./inc/header.php'); ?>
+    <div class="container mt-5">
+    <?php
+        if ($_SESSION['success']) {
+            echo '<div class="alert bg-info text-white">'.$_SESSION['success'].'</div>';
+        }
 
-    <form method="post" action="./dispatcher.php">
-        <input type="hidden" name="todo" value="add"/>
-        <label for="username">username</label>
-        <input type="text" id="username" name="username" placeholder="jacksparrow"/>
-        <label for="password">password</label>
-        <input type="password" id="password" name="password" placeholder="your password"/>
+        unset($_SESSION['success']);
+?>
+    <form method="post" action="./dispatcher.php" class="form">
+        <input type="hidden" name="todo" value="add" class="form-control"/>
+        <label for="username" class="form-label">Username</label>
+        <input type="text" id="username" name="username" placeholder="jacksparrow" class="form-control"/>
+        <label for="password" class="form-label">Password</label>
+        <input type="password" id="password" name="password" placeholder="your password" class="form-control"/>
 
-        <input type="submit" value="Créer character" />
-        <a class="btn btn-dark" href="./index.php">Return</a>
-
-        <!-- <label>role</label>
-        <input></input> -->
+        <input type="submit" value="Créer character" class="btn btn-primary mt-3"/>
     </form>
-    
+    <div class="mt-5">
+
+        <a class="btn btn-dark" href="./index.php">Return</a>
+    </div>
+</div>
 </body>
 </html>
