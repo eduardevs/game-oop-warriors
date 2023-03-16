@@ -1,14 +1,17 @@
 # Game OOP Warriors
-### TODO : 
-- Hydratation de la database de l'entité.
-- Database management with PDO.
-- Poo.
-- Docker
-    Avec :
+# In this project : 
+Simple game with object interactions using concepts from OOP.
+- PDO
+- Hydratation
+- Manager and fetchMode.
+- dispatcher that works as a controller.
 
-    -   php:7.4-apache
-    -   MariaDB
-    -   PhpMyAdmin
+## Stack
+
+-  php:7.4-apache
+-  MariaDB
+-  PhpMyAdmin
+-  Docker
 
 ## Le lancement
 
@@ -21,4 +24,7 @@ docker-compose up
 Et rendez vous sur **localhost:5555**
 
 Pour éditer: **./src**
-todo a faire lhydratation, interaction des objets et ux (messages de sessions)
+
+### TODO
+- add players interactions in interface : page -> arena.php
+- autoload for classes
