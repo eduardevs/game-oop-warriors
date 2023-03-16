@@ -26,5 +26,6 @@ Et rendez vous sur **localhost:5555**
 Pour éditer: **./src**
 
 ### TODO
-- add players interactions in interface : page -> arena.php
 - autoload for classes
+- add players interactions in interface : page -> arena.php
+  - Add join to a **tribe** feature  
